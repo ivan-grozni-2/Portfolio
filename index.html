@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Yohannes Yirga | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 </head>
 <body>
     <nav>
+        <button id="toogle-dark">Toogle Dark mode</button>
         <ul>
             <li><a href = #about>About</a></li>
             <li><a href = #projects>Projects</a></li>
@@ -22,15 +25,15 @@
   </header>
 
   <main>
-    <section id="about">
+    <section id="about" data-aos="fade-up">
       <h2>About Me</h2>
       <p>I'm a passionate beginner developer from Addis Ababa with a background in Electrical and Computer Engineering...</p>
     </section>
 
-    <section id="projects">
+    <section id="projects" data-aos="fade-up">
       <h2>Projects</h2>
-
-      <div class = "project-card">
+ 
+      <div class = "project-card" >
         <h3> Task manager app</h3>
         <p>A simple web app to add, edit, and manage daily tasks. Built using HTML, CSS, and JavaScript.</p>
         <p><strong>Tech used:</strong> HTML, CSS, JavaScript</p>
@@ -47,11 +50,44 @@
       
     </section>
 
-    <section id="contact">
+    <section id="contact" data-aos="fade-up">
       <h2>Contact</h2>
-      <p>Email: yirgayohannes4@gmail.com</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/yohannes-yirga-7aa73b254" target="_blank">My Profile</a></p>
+        <p><i class="fas fa-envelope"></i> yirgayohannes4@gmail.com</p>
+        <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/yohannes-yirga-7aa73b254" target="_blank"> Linkedin</a></p>
+        <p><i class="fab fa-github"></i> <a href="https://github.com/ivan-grozni-2" target="_blank"> Github</a></p>
+
+        <form id="contact-form">
+            <label for="name"> Name </label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email"> Email </label>
+            <input type="text" id="email" name="email" required>
+            
+            <label for="message"> message </label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <button type="submit"> Send </button>
+            
+        </form>
     </section>
+
   </main>
+
+<footer>
+    <p>&copy; 2025 Yohannes Yirga. All rights reserved. </p>
+</footer>
+  
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+<script>
+    const toogleButton = document.getElementById("toogle-dark");
+    toogleButton.addEventListener("click",() => {
+        document.body.classList.toggle('dark-mode');
+    });
+</script>
+
 </body>
 </html>
