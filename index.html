@@ -1,81 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Yohannes Yirga | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-</head>
-<body>
-    <nav>
-        <button id="toogle-dark">Toogle Dark mode</button>
-        <ul>
-            <li><a href = #about>About</a></li>
-            <li><a href = #projects>Projects</a></li>
-            <li><a href = #contact>Contacts</a></li>
-        </ul>
-    </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Yohannes Yirga | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  </head>
+  <body>
+    
+    <button id="toogle-dark" class="dark-btn">🌙</button>
 
-  <header>
-    <h1>Yohannes Yirga</h1>
-    <p>Junior Web Developer | JavaScript, Java, C++</p>
-    <img src = "images/profile.jpg" alt = "yohannes yirga" class =  "profile-image">
-  </header>
-
-  <main>
-    <section id="about" data-aos="fade-up">
-      <h2>About Me</h2>
-      <p>I'm a passionate beginner developer from Addis Ababa with a background in Electrical and Computer Engineering...</p>
+    <section class="hero">
+      <h1>Hi, I'm Yohannes</h1>
+      <p>I build modern, responsive web apps using HTML, CSS and MySQL.</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Hire Me</a>
+      </div>
     </section>
 
-    <section id="projects" data-aos="fade-up">
-      <h2>Projects</h2>
- 
-      <div id = "project-list" ></div>
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <div class="about-container">
+        <img src="profile.JPG" alt="Your photo" class="about-img">
+        <div class="about-text">
+          <p>
+            Hi, I’m <strong>Yohannes Yirga</strong> — a beginner frontend developer passionate about
+            building modern, responsive web applications. I specialize in
+            <strong>React, JavaScript, MySQL, HTML, and CSS</strong>.
+          </p>
+          <p>
+            My goal is to turn ideas into fully functional websites and apps.
+            I’m continuously learning, improving, and excited to start freelancing online.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills reveal" >
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill">⚛️ React</div>
+        <div class="skill">🟨 JavaScript</div>
+        <div class="skill">🛢️ MySQL</div>
+        <div class="skill">🎨 CSS</div>
+        <div class="skill">📄 HTM</div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects reveal" >
+      <h2>My Projects</h2>
+
+      <div id = "projects-grid" class="projects-grid" ></div>
       
     </section>
 
-    <section id="contact" data-aos="fade-up">
-      <h2>Contact</h2>
-        <p><i class="fas fa-envelope"></i> yirgayohannes4@gmail.com</p>
-        <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/yohannes-yirga-7aa73b254" target="_blank"> Linkedin</a></p>
-        <p><i class="fab fa-github"></i> <a href="https://github.com/ivan-grozni-2" target="_blank"> Github</a></p>
-
-        <form id="contact-form">
-            <label for="name"> Name </label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email"> Email </label>
-            <input type="text" id="email" name="email" required>
-            
-            <label for="message"> message </label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-            
-            <button type="submit"> Send </button>
-            
-        </form>
+    <section id="contact" class="contact reveal" >
+      <h2>Contact Me</h2>
+      <p>Interested in working together? Let’s connect!</p>
+      <div class="contact-links">
+        <a href="mailto:your-email@example.com" class="btn">📧 Email</a>
+        <a href="https://github.com/ivan-grozni-2" target="_blank" class="btn-outline">🐙 GitHub</a>
+        <a href="https://linkedin.com/in/your-linkedin" target="_blank" class="btn-outline">💼 LinkedIn</a>
+      </div>
     </section>
+    
+    <footer>
+        <p>&copy; 2025 Yohannes Yirga. All rights reserved. </p>
+    </footer>
+      
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src = "script.js"></script>
 
-  </main>
 
-<footer>
-    <p>&copy; 2025 Yohannes Yirga. All rights reserved. </p>
-</footer>
-  
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src = "script.js"></script>
-<script>
-    AOS.init();
-</script>
-
-<script>
-    const toogleButton = document.getElementById("toogle-dark");
-    toogleButton.addEventListener("click",() => {
-        document.body.classList.toggle('dark-mode');
-    });
-</script>
-
-</body>
+  </body>
 </html>
