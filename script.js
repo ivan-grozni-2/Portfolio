@@ -43,7 +43,7 @@ const GITUSER = "ivan-grozni-2";
 
 async function loadProjects() {
     try{
-        const response = await fetch(`https:api.github.com/users/${GITUSER}/repos`);
+        const response = await fetch(`https://api.github.com/users/${GITUSER}/repos`);
         const repos = await response.json();
 
         const projectRepos = repos.filter(repo => !repo.fork && repo.name!="skills-introduction-to-github");
