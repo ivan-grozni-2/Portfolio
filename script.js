@@ -53,20 +53,26 @@ async function loadProjects() {
         grid.innerHTML = "";
 
         projectRepos.forEach(repo => {
+            const link = document.createElement("a");
+            link.setAttribute("href", `${repo.homepage || repo.html_url}` )
+            link.classList.add("noline");
+            
+            
             const card = document.createElement("div");
             card.classList.add("card");
             card.classList.add("reveal");
-            card.setAttribute("href", `${repo.homepage || repo.html_url}` )
 
 
-            card.innerHTML = `
+            link.innerHTML = `
             <h3> ${repo.name} </h3>
             <p>${repo.description?.trim()  || "no description avaliable"} </p>
             <a href = "${repo.homepage || repo.html_url}" target = "_blank" class = "btn"> View Project </a>
             <a href = "${repo.html_url}" target = "_blank" class = "btn-outline"> Source Code </a>
             `;
 
+            
             grid.appendChild(card);
+            card.append(link);
         });
     } catch(error){
         console.error("Error loading projects:", error);
