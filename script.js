@@ -3,6 +3,10 @@ const list = document.getElementById("project-list");
 async function loadProjects() {
     try{
         const response = await fetch(`https://api.github.com/users/ivan-grozni-2/repos`);
+        if (!response.ok) {
+            throw new Error(`GitHub API error: ${response.status}`);
+          }
+
         const repos = await response.json();
 
         const projectRepos = repos.filter(repo => !repo.fork && repo.name!="skills-introduction-to-github");
@@ -28,6 +32,8 @@ async function loadProjects() {
         });
     } catch(error){
         console.error("Error loading projects:", error);
+        document.getElementById("projects-grid").innerHTML =
+          `<p style="color:red;">⚠️ Could not load projects. (${error.message})</p>`;
     }
     
 }
