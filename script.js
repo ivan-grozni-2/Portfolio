@@ -55,7 +55,6 @@ async function loadProjects() {
         projectRepos.forEach(repo => {
             const link = document.createElement("a");
             link.setAttribute("href", `${repo.homepage || repo.html_url}` )
-            link.classList.add("noline");
             
             
             const card = document.createElement("div");
