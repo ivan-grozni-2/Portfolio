@@ -1,44 +1,5 @@
 const list = document.getElementById("project-list");
 
-/*async function loadProjects(){
-    try{
-        const GitJSON = await fetch('https://api.github.com/users/ivan-grozni-2/repos')
-        const transJSON = await GitJSON.json();
-
-        const portfolios = transJSON
-            .filter(repo => !["skills-introduction-to-github"].includes(repo.name))
-            .sort((a, b) => new Date(b.update_at) - new Date(a.update_at));
-
-        //portfolios = transJSON;
-
-
-
-        portfolios.forEach(element => {
-            const card = document.createElement('div');
-            card.classList.add('project-card');
-            
-            const description = element.description?.trim() || 'No description provided yet.';
-            const homepage = element.homepage || `https://${element.owner.login}.github.io/${element.name}/`;
-
-            card.innerHTML = `
-                <h3>${formatTitle(element.name)}</h3>
-                <p>${description}</p>
-                <p><strong>Language:</strong> ${element.language || 'N/A'}</p>
-                <a href="${homepage}" target="_blank">Live Demo</a>
-                <a href="${element.html_url}" target="_blank">GitHub</a>
-            `;
-      
-            list.appendChild(card);
-            
-        });
-
-    }
-    catch(error) {
-        list.innerHTML = `<p> error ${error.message}</p>`
-
-    }
-}*/
-
 const GITUSER = "ivan-grozni-2";
 
 async function loadProjects() {
@@ -128,5 +89,55 @@ document.addEventListener("DOMContentLoaded", () => {
   if (savedTheme === "dark") {
     document.body.classList.add("dark-mode");
     darkToggle.textContent = "☀️";
+  }
+});
+
+const typingText = document.getElementById("typing-text");
+const roles = [
+  {name:"Frontend Developer", erasure : 0}, 
+  {name:"React Entuz", erasure : 6, waiterase : 3000},  
+  {name:"Entusia", erasure : 6},  
+  {name:"Enthus", erasure : 0, typedelay : 250},  
+  {name:"I like React", erasure : 0}, 
+  {name:"MySQL User", erasure : 0}, 
+  {name:"JavaScript Learner", erasure : 0}
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+
+function typeeffect(){
+  if (charIndex < roles[roleIndex].name.length){
+    typingText.textContent += roles[roleIndex].name.charAt(charIndex);
+    charIndex++;
+    setTimeout(typeeffect, roles[roleIndex].typedelay ||100);
+  }else{
+    charIndex = typingText.textContent.length;
+    setTimeout(eraseEffect, roles[roleIndex].waiterase || 2000);
+  }
+}
+
+function eraseEffect(){
+  if (charIndex > roles[roleIndex].erasure){
+    typingText.textContent = typingText.textContent.substring(0, charIndex-1);
+    charIndex--;
+    setTimeout(eraseEffect, 50);
+
+  }else{
+    roleIndex = (roleIndex + 1) % roles.length;
+    charIndex = 0;
+    setTimeout(typeeffect,500)
+  }
+}
+
+typeeffect();
+
+const navbar = document.querySelector("nav");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
   }
 });

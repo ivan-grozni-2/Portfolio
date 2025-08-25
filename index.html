@@ -3,31 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Yohannes - Frontend Developer Portfolio. React, JavaScript, MySQL projects.">
+    <meta name="author" content="Yohannes">
+    <meta property="og:title" content="Yohannes | Frontend Developer">
+    <meta property="og:description" content="Portfolio showcasing React, JavaScript, and MySQL projects.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ivan-grozni-2.github.io/portfolio-site/">
+    <meta property="og:image" content="profile.jpg">
     <title>Yohannes Yirga | Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    
   </head>
   <body>
     
     <button id="toogle-dark" class="dark-btn">🌙</button>
-
-    <section class="hero">
+       
+    <section id = "hero" class="hero">
       <h1>Hi, I'm Yohannes</h1>
-      <p>I build modern, responsive web apps using HTML, CSS and MySQL.</p>
+      <p id = "typing-text"></p>
       <div class="hero-buttons">
         <a href="#projects" class="btn">View Projects</a>
         <a href="#contact" class="btn btn-outline">Hire Me</a>
       </div>
     </section>
+    <nav>
+       <ul>
+          <li><a href = #about>About</a></li>
+          <li><a href = #projects>Projects</a></li>
+          <li><a href = #contact>Contacts</a></li>
+        </ul>
+  </nav>
 
-    <section id="about" class="about">
+    <section id="about" class="about reveal">
       <h2>About Me</h2>
       <div class="about-container">
         <img src="profile.JPG" alt="Your photo" class="about-img">
         <div class="about-text">
           <p>
-            Hi, I’m <strong>Yohannes Yirga</strong> — a beginner frontend developer passionate about
+            Hi, I'm <strong>Yohannes Yirga</strong> — a beginner frontend developer passionate about
             building modern, responsive web applications. I specialize in
             <strong>React, JavaScript, MySQL, HTML, and CSS</strong>.
           </p>
@@ -68,7 +84,8 @@
     </section>
     
     <footer>
-        <p>&copy; 2025 Yohannes Yirga. All rights reserved. </p>
+        <p>&copy; 2025 Yohannes Yirga. All rights reserved. </p>        
+        <p><a href="#hero">Back to top ↑</a></p>
     </footer>
       
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
