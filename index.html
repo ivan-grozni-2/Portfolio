@@ -1,96 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Yohannes - Frontend Developer Portfolio. React, JavaScript, MySQL projects.">
-    <meta name="author" content="Yohannes">
-    <meta property="og:title" content="Yohannes | Frontend Developer">
-    <meta property="og:description" content="Portfolio showcasing React, JavaScript, and MySQL projects.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ivan-grozni-2.github.io/portfolio-site/">
-    <meta property="og:image" content="profile.jpg">
-    <title>Yohannes Yirga | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    
-  </head>
-  <body>
-    
-    <button id="toogle-dark" class="dark-btn">🌙</button>
-       
-    <section id = "hero" class="hero">
-      <h1>Hi, I'm Yohannes</h1>
-      <p id = "typing-text"></p>
-      <div class="hero-buttons">
-        <a href="#projects" class="btn">View Projects</a>
-        <a href="#contact" class="btn btn-outline">Hire Me</a>
-      </div>
-    </section>
-    <nav>
-       <ul>
-          <li><a href = #about>About</a></li>
-          <li><a href = #projects>Projects</a></li>
-          <li><a href = #contact>Contacts</a></li>
-        </ul>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Yohannes - Frontend Developer Portfolio. React, JavaScript, MySQL projects.">
+  <meta name="author" content="Yohannes">
+  <meta property="og:title" content="Yohannes | Frontend Developer">
+  <meta property="og:description" content="Portfolio showcasing React, JavaScript, and MySQL projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ivan-grozni-2.github.io/portfolio-site/">
+  <meta property="og:image" content="profile.jpg">
+  <title>Yohannes Yirga | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+</head>
+
+<body>
+
+  <button id="toogle-dark" class="dark-btn">🌙</button>
+
+  <section id="hero" class="hero">
+    <h1>Hi, I'm Yohannes</h1>
+    <p id="typing-text"></p>
+    <div class="hero-buttons">
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="#contact" class="btn btn-outline">Hire Me</a>
+    </div>
+  </section>
+  <nav>
+    <ul>
+      <li><a href=#about>About</a></li>
+      <li><a href=#skills>Skills</a></li>
+      <li><a href=#projects>Projects</a></li>
+      <li><a href=#contact>Contacts</a></li>
+    </ul>
   </nav>
 
-    <section id="about" class="about reveal">
-      <h2>About Me</h2>
-      <div class="about-container">
-        <img src="profile.JPG" alt="Your photo" class="about-img">
-        <div class="about-text">
-          <p>
-            Hi, I'm <strong>Yohannes Yirga</strong> — a beginner frontend developer passionate about
-            building modern, responsive web applications. I specialize in
-            <strong>React, JavaScript, MySQL, HTML, and CSS</strong>.
-          </p>
-          <p>
-            My goal is to turn ideas into fully functional websites and apps.
-            I’m continuously learning, improving, and excited to start freelancing online.
-          </p>
-        </div>
+  <section id="about" class="about reveal">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <img src="profile.JPG" alt="Your photo" class="about-img">
+      <div class="about-text">
+        <p>
+          Hi, I'm <strong>Yohannes Yirga</strong> — a beginner frontend developer passionate about
+          building modern, responsive web applications. I specialize in
+          <strong>React, JavaScript, MySQL, HTML, and CSS</strong>.
+        </p>
+        <p>
+          My goal is to turn ideas into fully functional websites and apps.
+          I'm continuously learning, improving, and excited to start freelancing online.
+        </p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="skills" class="skills reveal" >
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill">⚛️ React</div>
-        <div class="skill">🟨 JavaScript</div>
-        <div class="skill">🛢️ MySQL</div>
-        <div class="skill">🎨 CSS</div>
-        <div class="skill">📄 HTM</div>
-      </div>
-    </section>
+  <section id="skills">
+    <h2>Skills</h2>
 
-    <section id="projects" class="projects reveal" >
-      <h2>My Projects</h2>
+  </section>
 
-      <div id = "projects-grid" class="projects-grid" ></div>
-      
-    </section>
+  <section id="projects" class="projects reveal">
+    <h2>My Projects</h2>
 
-    <section id="contact" class="contact reveal" >
-      <h2>Contact Me</h2>
-      <p>Interested in working together? Let’s connect!</p>
-      <div class="contact-links">
-        <a href="mailto:3ivangrozni@gmail.com" class="btn">📧 Email</a>
-        <a href="https://github.com/ivan-grozni-2" target="_blank" class="btn-outline">🐙 GitHub</a>
-        <a href="https://linkedin.com/in/yohannes-yirga-7aa73b254" target="_blank" class="btn-outline">💼 LinkedIn</a>
-      </div>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 Yohannes Yirga. All rights reserved. </p>        
-        <p><a href="#hero">Back to top ↑</a></p>
-    </footer>
-      
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src = "script.js?v=1.2"></script>
+    <div id="projects-grid" class="projects-grid"></div>
+
+  </section>
+
+  <section id="contact" class="contact reveal">
+    <h2>Contact Me</h2>
+    <p>Interested in working together? Let’s connect!</p>
+    <div class="contact-links">
+      <a href="mailto:3ivangrozni@gmail.com" class="btn">📧 Email</a>
+      <a href="https://github.com/ivan-grozni-2" target="_blank" class="btn-outline">🐙 GitHub</a>
+      <a href="https://linkedin.com/in/yohannes-yirga-7aa73b254" target="_blank" class="btn-outline">💼 LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Yohannes Yirga. All rights reserved. </p>
+    <p><a href="#hero">Back to top ↑</a></p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js?v=1.3"></script>
 
 
-  </body>
+</body>
+
 </html>
