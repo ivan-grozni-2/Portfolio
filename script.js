@@ -174,21 +174,14 @@ async function listLanguages() {
           }
         })
 
-
-
       } catch (error) {
         console.error("Error loading projects:", error);
       }
 
-
     }));
-
 
     const skillsbox = document.getElementById('skills');
     const langNo = Object.entries(levelList);
-
-    console.log(langNo);
-    console.log(levelList);
 
     let total = 0;
     for (let i = 0; i < langNo.length; i++) {
@@ -201,8 +194,6 @@ async function listLanguages() {
       let langName = Object.entries(levelList)[i];
 
       let level = ((langName[1]) / total) * 100;
-
-      console.log(langName);
 
       const skill = document.createElement("div")
       skill.classList.add("skill");
@@ -229,21 +220,21 @@ async function listLanguages() {
 
           skillLevel.style.width = level + '%';
 
-          
-        let count = 0;
 
-        skillLevel.style.width = level + '%';
+          let count = 0;
 
-        if (parseInt(skillPercent.textContent) < level) {
-          const interval = setInterval(() => {
-            if (count >= level*2) {
-              clearInterval(interval);
-            } else {
-              count++;
-              skillPercent.textContent = count/2 + '%';
-            }
-          }, 50);
-        }
+          skillLevel.style.width = level + '%';
+
+          if (parseInt(skillPercent.textContent) == 0) {
+            const interval = setInterval(() => {
+              if (count >= level * 11) {
+                clearInterval(interval);
+              } else {
+                count++;
+                skillPercent.textContent = Number.parseFloat(count / 11).toFixed(2) + '%';
+              }
+            }, 1);
+          }
 
         }
 
