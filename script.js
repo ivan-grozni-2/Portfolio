@@ -236,18 +236,15 @@ async function listLanguages() {
 
         if (parseInt(skillPercent.textContent) < level) {
           const interval = setInterval(() => {
-            if (count >= level) {
+            if (count >= level*2) {
               clearInterval(interval);
             } else {
               count++;
-              skillPercent.textContent = count + '%';
+              skillPercent.textContent = count/2 + '%';
             }
           }, 50);
         }
 
-
-        } else {
-          skillLevel.style.width = '0';
         }
 
       }
